@@ -32,3 +32,13 @@ Instalamos librerías extras que utilizaremos:
 yarn add faker firebase moment vue-i18n vue-mugen-scroll vuetify vuex --save
 ```
 
+
+En index.html añadimos fuente roboto y material icons:
+
+```
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700|Material+Icons" rel="stylesheet">
+```
+
+### Iconos de Material 
+https://material.io/tools/icons/?style=baseline
+
