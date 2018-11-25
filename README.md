@@ -17,5 +17,18 @@ npm run build
 # build for production and view the bundle analyzer report
 npm run build --report
 ```
+## Pasos iniciales seguidos
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+Instalamos el vue cli, para luego utilizarlo (creando un proyecto con vue):
+
+```
+npm install -g vue-cli
+vue init webpack vue-firestore
+```
+
+Instalamos librerías extras que utilizaremos:
+
+```
+yarn add faker firebase moment vue-i18n vue-mugen-scroll vuetify vuex --save
+```
+
