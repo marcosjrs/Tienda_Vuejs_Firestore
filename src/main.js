@@ -4,6 +4,7 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import i18n from '@/config/i18n'
+import store from '@/store/'
 
 //firebase
 import firebase from 'firebase'
@@ -20,6 +21,7 @@ new Vue({
   el: '#app',
   router,
   i18n,
+  store,
   components: { App },
   template: '<App/>'
 })
