@@ -5,6 +5,7 @@ import App from './App'
 import router from './router'
 import i18n from '@/config/i18n'
 import store from '@/store/'
+require('./config/vuetify'); 
 
 //firebase
 import firebase from 'firebase'
