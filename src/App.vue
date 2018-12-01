@@ -7,6 +7,8 @@
         <v-container class="mt-5 mb-5">
           <router-view />
         </v-container>
+        <Footer />
+
       </v-content>
 
     </v-app>
@@ -16,12 +18,14 @@
 <script>
 
 import GuestNavigation from '@/components/navigations/guest';
+import Footer from '@/components/footer/Footer';
 
 export default {
   name: 'App',
   components: {
-    GuestNavigation
-    }
+    GuestNavigation,
+    Footer
+  }
 }
 </script>
 
