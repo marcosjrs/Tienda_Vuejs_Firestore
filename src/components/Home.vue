@@ -2,7 +2,7 @@
   <v-jumbotron
     color="grey lighten-2"
   >
-    <v-container fill-height>
+    <v-container fill-height >
       <v-layout align-center>
         <v-flex>
           <h3 class="display-3">

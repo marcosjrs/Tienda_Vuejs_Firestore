@@ -1,0 +1,3 @@
+html{
+    overflow-y: auto!important; /*por defecto vuetify lo pone en scroll*/
+  }

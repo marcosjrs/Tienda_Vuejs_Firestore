@@ -2,8 +2,9 @@
   <main>
     <v-app>
 
-      <v-content>
-        <v-container class="mt-3 mb-3">
+      <v-content > 
+        <guest-navigation /> <!-- en el futuro solo se mostrará en usuarios tipo guest -->
+        <v-container class="mt-5 mb-5">
           <router-view />
         </v-container>
       </v-content>
@@ -13,8 +14,14 @@
 </template>
 
 <script>
+
+import GuestNavigation from '@/components/navigations/guest';
+
 export default {
-  name: 'App'
+  name: 'App',
+  components: {
+    GuestNavigation
+    }
 }
 </script>
 
@@ -25,6 +32,6 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin-top: 0px;
 }
 </style>
