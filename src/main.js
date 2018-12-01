@@ -5,6 +5,8 @@ import App from './App'
 import router from './router'
 import i18n from '@/config/i18n'
 import store from '@/store/'
+import Home from '@/components/Home';
+
 require('./config/vuetify'); 
 
 //firebase
@@ -23,6 +25,6 @@ new Vue({
   router,
   i18n,
   store,
-  components: { App },
+  components: { App, Home },
   template: '<App/>'
 })
