@@ -30,10 +30,28 @@
             }
         },
         methods: {
-            register (user) {
-                //despatchará un acción del store para que registre el usuario, y se actualizará el user y el tipo de usuario (rol)
-                console.log(user);
-            }
-        }
+		  register (user) {
+		    this.$store.dispatch('firebaseRegister', user)  //Esta action del store de auth devuelve una promise (de la llamada acreateUserWithEmailAndPassword de firebase)
+          .then((infoRegistered) => {
+            const userRegistered = infoRegistered.user; // info dada por firebase al registrar el user
+            const data = {
+              uid: userRegistered.uid, 
+              email: user.email,
+              role: 'customer'
+            };
+            db.collection('users').doc(userRegistered.uid).set(data).then(() => { // con los datos creamos un doc en la colección "users" dentro de storage de la cuenta de firebase
+              this.$store.commit('setRole', data.role);//una vez guardado  establecemos el role y redireccionamos al inicio
+              this.$router.push('/');
+            });
+          })
+          .catch((error) => {
+            this.message = error.message.substr(0, 60);
+            this.snackBar = true;
+            setTimeout(() => {
+              this.snackBar = false;
+            }, this.timeout);
+          })
+      }
+    }
     }
 </script>

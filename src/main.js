@@ -16,6 +16,9 @@ import firebaseConfig from '@/config/firebase'
 firebase.initializeApp(firebaseConfig);
 export const db = firebase.firestore(); //db.collections... db.doc.... 
 
+const settings = {timestampsInSnapshots: true};
+firebase.firestore().settings(settings); // para que no de un pete por configuración de fechas (Date)
+
 
 Vue.config.productionTip = false
 
