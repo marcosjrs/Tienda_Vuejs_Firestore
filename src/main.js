@@ -29,5 +29,21 @@ new Vue({
   i18n,
   store,
   components: { App, Home },
-  template: '<App/>'
+  template: '<App/>',
+  mounted () { //Se añade aquí porque así nos aseguramos que va a "estar" siempre.
+    firebase.auth().onAuthStateChanged((user) => { // listener al cambio de estado del auth
+      if (user) { // Asi nos aseguramos que no pierda la sesión porque al recargar pagina firebase tiene guardado el user, y salta eso
+        db.collection('users').doc(user.uid).onSnapshot(snapshot => { //recogemos los datos del usuario del doc ("como" una fila de la BBDD) de firestore
+        //console.log("onSnapshot...",user, snapshot);  
+        store.commit('setUser', user);
+          if (snapshot.exists) {
+            store.commit('setRole', snapshot.data().role); // si teníamos el usuario guardado en firebase, utilizamos el role que guardaramos
+          }
+          store.commit('setLoaded', true);
+        })
+      } else {
+        store.commit('setLoaded', true);
+      }
+    })
+  }
 })
