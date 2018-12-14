@@ -41,9 +41,9 @@ export default {
     },
     welcome: {
       title: 'Bienvenido a {app}',
-      content: 'En este curso aprenderás a utilizar Vuejs 2 + Firebase + Firestore para desarrollar aplicaciones en tiempo real con Vuetify desde 0',
-      call_to_action: 'Quiero saber más!',
-      action_button: 'Ver más'
+      content: 'Este es un proyecto realizado siguiendo un curso de Udemy',
+      call_to_action: 'El código fuente está disponible en mi cuenta de Github',
+      action_button: 'Ir a cuenta de Github'
     },
     auth: {
       email: 'Correo electrónico',
