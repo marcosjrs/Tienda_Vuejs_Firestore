@@ -42,3 +42,11 @@ En index.html añadimos fuente roboto y material icons:
 ### Iconos de Material 
 https://material.io/tools/icons/?style=baseline
 
+
+### Usuarios creados en Firebase para el proyecto
+
+A modo de recordatorio (porque en breve la bbdd de firebase no la tendré al publico), los usuarios básicos creados han sido:
+
+admin1@email.com | admin1
+customer@email.com | customer
+
