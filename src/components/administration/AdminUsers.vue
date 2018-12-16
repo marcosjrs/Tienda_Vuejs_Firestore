@@ -1,5 +1,8 @@
 <template>
   <div>
+      
+    <admin-users-dialog/>
+
     <v-data-table
       :headers="headers"
       :items="users"
@@ -23,7 +26,7 @@
         </td>
       </template>
     </v-data-table>
-
+    
   </div>
 </template>
 
