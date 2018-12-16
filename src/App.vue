@@ -8,9 +8,14 @@
         <admin-navigation v-if="role === 'admin'" /> <!-- tuvimos que modificar, poniendole el role admin a, un usuario que ya teniamos registrado en la base de datos de firebase -->
 
         <v-container class="mt-5 mb-5">
+          <v-alert :type="$store.state.alert.type" :value="$store.state.alert.show">
+            {{ $store.state.alert.message }}
+          </v-alert>
           <router-view />
         </v-container>
+
         <Footer />
+
       </v-content>
 
       <v-container v-else fill-height>

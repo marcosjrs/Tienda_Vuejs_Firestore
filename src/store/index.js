@@ -29,9 +29,9 @@ export default new Vuex.Store(
                 state.alert.message = data.message;
                 setTimeout(()=>{ 
                     //restauramos valores iniciales
-                    this.alert.type = 'success';
-                    this.alert.show = false;
-                    this.alert.message = '';
+                    state.alert.type = 'success';
+                    state.alert.show = false;
+                    state.alert.message = '';
                 }, data.timeout);
             }
         },
