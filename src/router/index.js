@@ -5,6 +5,7 @@ import Home from '@/components/Home'
 import Register from '@/components/forms/Register'
 import Login from '@/components/forms/Login'
 import AdminHome from '@/components/administration/AdminHome'
+import AdminUsers from '@/components/administration/AdminUsers'
 
 Vue.use(Router);
 
@@ -52,13 +53,15 @@ const router = new Router({
       path: '/admin',
       name: 'Admin',
       component: AdminHome,
-      meta:{
-        Auth: true, title: 'Administración', role:'admin'
-      },
-      children:[
-        
+      meta: { Auth: true, title: 'Administración', role: 'admin' },
+      children: [
+        {
+          path: 'users',
+          component: AdminUsers,
+          meta: { title: 'Adminstrar Usuarios' },
+        }
       ]
-    }
+    },
   ]
 })
 
